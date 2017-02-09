@@ -1,8 +1,9 @@
-# Hi!
-_Welcome to the land of JellyBOX!_
+# JellyBOX Essentials
+
+_Hi! Welcome to the land of JellyBOX!_
 _We are incredibly excited you we have crossed paths. Can't wait for you to get started._
 
-# Shortcut: [IMADE3D.com/support](http://IMADE3D.com/support)
+## Click Here: [IMADE3D.com/support](http://IMADE3D.com/support)
 - is the one link you really really need.
 - all the other links, and most up-to-date, you'll find there.
  - one link to rule them all...
@@ -18,7 +19,8 @@ If you ever encounter any issues during your building or printing, talk to us at
 
 ## THIS SD CARD
 - By default, we ship the JellyBOX with an SD card pre-loaded with a selection of 3D models, ready-to-print files, and links to documentation and additional downloads.
-- If you ever lose or delete this card, you can download the latest version as a zip archive at **[our JB ESSENTIALS GitHub](https://github.com/IMADE3D/JellyBOX-Essentials/releases)**
+- If you ever lose or delete this card, you can download the latest version as a zip archive at our **JB ESSENTIALS GitHub**
+  -  [github.com/IMADE3D/JellyBOX-Essentials/releases](https://github.com/IMADE3D/JellyBOX-Essentials/releases).
 
 ## HOWTO BUILD JELLYBOX
 - [IMADE3D.com/support](http://IMADE3D.com/support)
