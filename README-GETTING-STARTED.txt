@@ -2,11 +2,12 @@
 _Welcome to the land of JellyBOX!_
 _We are incredibly excited you we have crossed paths. Can't wait for you to get started._
 
-# Shortcut: [bit.ly/jellybox-docs](http://bit.ly/jellybox-docs)
+# Shortcut: [IMADE3D.com/support](http://IMADE3D.com/support)
 - is the one link you really really need.
-- easy to remember link: bit.ly/jellybox-docs
+- all the other links, and most up-to-date, you'll find there.
+ - one link to rule them all...
 
-![](http://i.imgur.com/tnP33Ph.png)
+![](http://i.imgur.com/SOItnvE.png)
 
 <hr>
 
@@ -18,20 +19,20 @@ If you ever encounter any issues during your building or printing, talk to us at
 - If you ever lose or delete this card, you can download the latest version as a zip archive at **[our JB ESSENTIALS GitHub](https://github.com/IMADE3D/JellyBOX-Essentials/releases)**
 
 ## HOWTO BUILD JELLYBOX
-- [JellyBOX Docs](http://bit.ly/jellybox-docs)
+- [IMADE3D.com/support](http://IMADE3D.com/support)
 - JellyBOX Build Guide is here!
 - JellyBOX HowTo (Usage) Guide is here!
 - You should come over as well.
 
 ## HOWTO USE JELLYBOX
-- [JellyBOX Docs](http://bit.ly/jellybox-docs)
+- [IMADE3D.com/support](http://IMADE3D.com/support)
 - I think I already mentioned this.
 
 
 ## CURA 2
-- 3D models need to be processed or 'sliced' to be 3D-printable.
+- 3D models need to be processed or 'sliced' to be 3D-printable (we go into more detail in the Docs.)
 - We recommend using Cura as your first all-purpose slicer. It is open-source, free, and always rapidly improving.
-- More info, installation guide, setup... in the [JellyBOX Docs](http://bit.ly/jellybox-docs)
+- More info, installation guide, setup... on the [IMADE3D.com/support](http://IMADE3D.com/support)
 
 
 ## GCODES - ready to print
@@ -40,7 +41,7 @@ If you ever encounter any issues during your building or printing, talk to us at
 - There's a basic cube, spiralized cube, small duck sliced for TPU (rubber) and PLA, little articulated print-in-place fish, and finally the uber-popular hybrid gear bearing (modeled by Whosawhatsis) and sliced as a single-wall quick print.
 - **Alert: You can only run compatible gcodes - at the very least they must have G28; G29; at the beginning.**
   - All gcodes sliced with our presets are compatible.
-  - (If you don't know what this means, head over to the [JellyBOX Docs](http://bit.ly/jellybox-docs))
+  - (If you don't know what this means, head over to [IMADE3D.com/support](http://IMADE3D.com/support) and take it slow
 
 ## 3D MODELS - ready to slice
   - you can experiment with slicing on these without having to go fishing for files online first. We also include a good range of calibration objects so you can perfect your slicing skill.
@@ -56,8 +57,8 @@ If you ever encounter any issues during your building or printing, talk to us at
 
 ## Firmware-Marlin
 - Firmware is the brains of the printer. Or, it's the code that determines how the brain functions. Over time, we add features and fix mistakes of the past, which makes JellyBOX work better. When there is a new firmware version, you should upgrade.
-- To upgrade your firmware, please head over [IMADE3D SUPPORT PAGE](http://imade3d.com/support) or straight to our [IMADE3D Marlin Github](https://github.com/IMADE3D/Marlin/releases)
-- There's instructions on Upgrading Firmware in the infamous [JellyBOX Docs](http://bit.ly/jellybox-docs))
+- To upgrade your firmware, please head over [IMADE3D.com/support](http://IMADE3D.com/support) or straight to our [github.com/IMADE3D/Marlin/releases](https://github.com/IMADE3D/Marlin/releases)
+- There's instructions on Upgrading Firmware in the infamous JellyBOX Docs though [IMADE3D.com/support](http://IMADE3D.com/support))
 
 <hr>
 
