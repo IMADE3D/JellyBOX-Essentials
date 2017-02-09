@@ -14,6 +14,8 @@ _We are incredibly excited you we have crossed paths. Can't wait for you to get 
 ## SUPPORT
 If you ever encounter any issues during your building or printing, talk to us at http://imade3d.com/support, email support@imade3d.com, or tweet at @yesIMADE3D.
 
+<div class="page-break"></div>
+
 ## THIS SD CARD
 - By default, we ship the JellyBOX with an SD card pre-loaded with a selection of 3D models, ready-to-print files, and links to documentation and additional downloads.
 - If you ever lose or delete this card, you can download the latest version as a zip archive at **[our JB ESSENTIALS GitHub](https://github.com/IMADE3D/JellyBOX-Essentials/releases)**
@@ -28,12 +30,10 @@ If you ever encounter any issues during your building or printing, talk to us at
 - [IMADE3D.com/support](http://IMADE3D.com/support)
 - I think I already mentioned this.
 
-
 ## CURA 2
 - 3D models need to be processed or 'sliced' to be 3D-printable (we go into more detail in the Docs.)
 - We recommend using Cura as your first all-purpose slicer. It is open-source, free, and always rapidly improving.
 - More info, installation guide, setup... on the [IMADE3D.com/support](http://IMADE3D.com/support)
-
 
 ## GCODES - ready to print
 - gcode is a 3D file processed for 3D printing.
@@ -42,6 +42,8 @@ If you ever encounter any issues during your building or printing, talk to us at
 - **Alert: You can only run compatible gcodes - at the very least they must have G28; G29; at the beginning.**
   - All gcodes sliced with our presets are compatible.
   - (If you don't know what this means, head over to [IMADE3D.com/support](http://IMADE3D.com/support) and take it slow
+
+<div class="page-break"></div>
 
 ## 3D MODELS - ready to slice
   - you can experiment with slicing on these without having to go fishing for files online first. We also include a good range of calibration objects so you can perfect your slicing skill.
