@@ -186,16 +186,14 @@
 G90
 M83
 M106 S0
-M140 S80
-M190 S80
 M104 S210 T0
 M109 S210 T0
 ; Jellybox Start Script Begin
-M117 Preparing 
+M117 Preparing
 ; set x homing offset for default bed leveling
-M206 X10.0 Y0.0  
+M206 X10.0 Y0.0
 ; optionally adjust Extruder steps per mm for your filament
-; M92 E140 
+; M92 E140
 ; home all axes
 G28
 ; slow Z speed down for greater accuracy
