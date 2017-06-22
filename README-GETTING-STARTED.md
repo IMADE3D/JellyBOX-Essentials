@@ -8,15 +8,17 @@ _We are incredibly excited you we have crossed paths. Can't wait for you to get 
 - all the other links, and most up-to-date, you'll find there.
  - one link to rule them all...
 
-![](http://i.imgur.com/SOItnvE.png)
+![](http://i.imgur.com/qCm9hNr.png)
 
 <hr>
 
 ## SUPPORT & HELP
 
-### Many to One Help
+### Many to One Help: forum.imade3d.com
 
 http://forum.imade3d.com is the first support authority. Common folk and IMDADE3D staff roam the forum hand in hand. Come and join. We are friendly and eager to help you out.
+
+![](http://i.imgur.com/m1aCHV9.png)
 
 ### One to One Help
 If you ever encounter any issues during your building or printing, talk to us at http://imade3d.com/support, email support@imade3d.com, or tweet at @yesIMADE3D.
