@@ -12,12 +12,19 @@ _We are incredibly excited you we have crossed paths. Can't wait for you to get 
 
 <hr>
 
-## SUPPORT
+## SUPPORT & HELP
+
+### Many to One Help
+
+http://forum.imade3d.com is the first support authority. Common folk and IMDADE3D staff roam the forum hand in hand. Come and join. We are friendly and eager to help you out.
+
+### One to One Help
 If you ever encounter any issues during your building or printing, talk to us at http://imade3d.com/support, email support@imade3d.com, or tweet at @yesIMADE3D.
+
 
 <div class="page-break"></div>
 
-## THIS SD CARD
+## IMADE3D SD CARD
 - By default, we ship the JellyBOX with an SD card pre-loaded with a selection of 3D models, ready-to-print files, and links to documentation and additional downloads.
 - If you ever lose or delete this card, you can download the latest version as a zip archive at our **JB ESSENTIALS GitHub**
   -  [github.com/IMADE3D/JellyBOX-Essentials/releases](https://github.com/IMADE3D/JellyBOX-Essentials/releases).
@@ -53,11 +60,6 @@ If you ever encounter any issues during your building or printing, talk to us at
   - Get more models at [Thingiverse](http://www.thingiverse.com/), [Youmagine](https://www.youmagine.com/), [Yeggi](http://www.yeggi.com/).
   - Or, get 3D modeling with [TinkerCAD](https://www.tinkercad.com/), [OpenSCAD](http://www.openscad.org/), or [Fusion360](http://www.autodesk.com/products/fusion-360/overview).
   - Or any other 3D modeling program.
-
-## Unverified Bleeding Edge Info for Hackers
-- Well, our [GitHub Hub](https://github.com/IMADE3D)
-- But also: http://bit.ly/imade3d-jellybox-resources
- - In this gdoc, you’ll find a bleeding edge community guided notes on Jellybox. It’s an impromptu forum in a way. Troubleshooting, links to resources, etc. If you want to be experimenting and the Docs are not enough, here you go.
 
 ## Firmware-Marlin
 - Firmware is the brains of the printer. Or, it's the code that determines how the brain functions. Over time, we add features and fix mistakes of the past, which makes JellyBOX work better. When there is a new firmware version, you should upgrade.
