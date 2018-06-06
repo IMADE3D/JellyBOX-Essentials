@@ -3,29 +3,55 @@
 ;Filament used: 0.323038m
 ;Layer height: 0.3
 ;Generated with Cura_SteamEngine 2.5.0
-M190 S55
-; ---------------------------------------
-
-
-
-M117 Preparing        ; write Preparing
-M140 S55              ; set bed temperature and move on
-M109 S210             ; wait for the extruder to reach desired temperature
-M206 X10.0 Y0.0       ; set x homing offset for default bed leveling
-G21                   ; metric values
-G90                   ; absolute positioning
-M107                  ; start with the fan off
-M82                   ; set extruder to absolute mode
-G28                   ; home all axes
-M203 Z4               ; slow Z speed down for greater accuracy when probing
-G29                   ; auto bed leveling procedure
-M203 Z7               ; pick up z speed again for printing
-M190 S55              ; wait for the bed to reach desired temperature
-M109 S215             ; wait for the extruder to reach desired temperature for 1st layer
-G92 E0                ; reset the extruder position
-G1 F1500 E15          ; extrude 15mm of feed stock
-G92 E0                ; reset the extruder position again
-M117 Print starting   ; write Print starting
+;---------------------------------------
+; ; ; Jellybox Start Script Begin ; ; ;
+;_______________________________________
+G21               ;metric values
+G90               ;absolute positioning
+M82               ;set extruder to absolute mode
+M107              ;start with the fan off
+M117 Preparing    ;write Preparing
+M190 S45          ;wait for the bed to reach 45C
+M109 S180         ;wait for the extruder to reach 180C
+G28               ;home all axes
+M203 Z4           ;slow Z speed down for greater accuracy when probing
+G29               ;auto bed leveling procedure
+;M500              ;optionally save the mesh
+M203 Z7           ;pick up z speed again for printing
+G28 X             ;home x to get as far from the plate as possible
+M420 S1           ;(re) enable bed leveling turned off by the G28
+G0 Y0 F5000       ;position Y in front
+G0 Z15 F3000      ;position Z
+M190 S60          ;wait for the bed to reach desired temperature
+M109 S210         ;wait for the extruder to reach desired temperature
+M300 S440 P100    ;play a tone
+G4 P200           ;pause
+M300 S440 P100    ;play a tone
+G4 P200           ;pause
+M300 S440 P800    ;play a tone
+M0
+M420 S1           ;(re) enable bed leveling to make iron-sure
+M117 Print starting   ;write Print starting
+;================ ;PRINT:LINE start
+G90               ;absolute positioning
+G92 E0            ;reset the extruder position
+M420 S1           ;(re) enable bed leveling to make iron-sure
+G0 Z0             ;get Z down
+M83               ;relative extrusion mode
+G1 E22 F500       ;extrude __mm of feed stock
+G1 E18 F400       ;extrude __mm of feed stock
+G1 E10 F400       ;extrude __mm of feed stock
+G4 S2             ;pause for ooze
+M400              ;make sure all is finished
+M420 S1           ;(re) enable bed leveling to make iron-sure
+G0 F500 X3 Y0 Z0.6;get to the start of the LINE
+G1 E2 F300        ;extrude __mm of feed stock
+G1 F1000 X104 E10  ;print a thick LINE extruding __mm along the way
+M82               ;absolute extrusion mode
+G92 E0            ;reset the extruder position
+;---------------------------------------------
+; ; ; Jellybox Printer Start Script End ; ; ;
+;_____________________________________________
 ;LAYER_COUNT:3
 ;LAYER:0
 M107
@@ -1154,8 +1180,6 @@ G1 F1500 X99.219 Y65.843 E323.0376
 G0 F7200 X99 Y66
 ;TIME_ELAPSED:323.454326
 G1 F4200 E321.7376
-M107
-
 ;---------------------------------
 ;;; Jellybox End Script Begin ;;;
 ;_________________________________

@@ -183,29 +183,55 @@
 ;   allowThinWallGapFill,1
 ;   thinWallAllowedOverlapPercentage,15
 ;   horizontalSizeCompensation,0
-G90
-M83
-M106 S0 
-M104 S208 T0
-M109 S208 T0
-; Jellybox Start Script Begin
-M117 Preparing
-; set x homing offset for default bed leveling
-M206 X10.0 Y0.0
-; optionally adjust Extruder steps per mm for your filament
-; M92 E140
-; home all axes
-G28
-; slow Z speed down for greater accuracy
-M203 Z5
-; auto bed leveling procedure
-G29
-; pick up z speed again for print
-M203 Z7
-; reset extruder position
-G92 E0
-M117 Print starting
-;Jellybox Printer Start Script End
+;---------------------------------------
+; ; ; Jellybox Start Script Begin ; ; ;
+;_______________________________________
+G21               ;metric values
+G90               ;absolute positioning
+M82               ;set extruder to absolute mode
+M107              ;start with the fan off
+M117 Preparing    ;write Preparing
+M190 S45          ;wait for the bed to reach 45C
+M109 S180         ;wait for the extruder to reach 180C
+G28               ;home all axes
+M203 Z4           ;slow Z speed down for greater accuracy when probing
+G29               ;auto bed leveling procedure
+;M500              ;optionally save the mesh
+M203 Z7           ;pick up z speed again for printing
+G28 X             ;home x to get as far from the plate as possible
+M420 S1           ;(re) enable bed leveling turned off by the G28
+G0 Y0 F5000       ;position Y in front
+G0 Z15 F3000      ;position Z
+M190 S60          ;wait for the bed to reach desired temperature
+M109 S210         ;wait for the extruder to reach desired temperature
+M300 S440 P100    ;play a tone
+G4 P200           ;pause
+M300 S440 P100    ;play a tone
+G4 P200           ;pause
+M300 S440 P800    ;play a tone
+M0
+M420 S1           ;(re) enable bed leveling to make iron-sure
+M117 Print starting   ;write Print starting
+;================ ;PRINT:LINE start
+G90               ;absolute positioning
+G92 E0            ;reset the extruder position
+M420 S1           ;(re) enable bed leveling to make iron-sure
+G0 Z0             ;get Z down
+M83               ;relative extrusion mode
+G1 E22 F500       ;extrude __mm of feed stock
+G1 E18 F400       ;extrude __mm of feed stock
+G1 E10 F400       ;extrude __mm of feed stock
+G4 S2             ;pause for ooze
+M400              ;make sure all is finished
+M420 S1           ;(re) enable bed leveling to make iron-sure
+G0 F500 X3 Y0 Z0.6;get to the start of the LINE
+G1 E2 F300        ;extrude __mm of feed stock
+G1 F1000 X104 E10  ;print a thick LINE extruding __mm along the way
+M82               ;absolute extrusion mode
+G92 E0            ;reset the extruder position
+;---------------------------------------------
+; ; ; Jellybox Printer Start Script End ; ; ;
+;_____________________________________________
 G1 E-1.3000 F4200
 G1 Z0.250 F300
 M117 Layer 1, Z = 0.22
@@ -38237,27 +38263,26 @@ G1 X82.457 Y80.171 E0.0002
 G1 X81.816 Y79.530 E0.0358
 G1 E-1.3000 F4200
 M117 Layer end
-;Jellybox Printer End Script Start
-; extruder heater off
-M104 S0
-; bed heater off (if you have it)
-M140 S0
-; turn fan off
-M107
-; relative positioning
-G91
-; retract the filament a bit before lifting the nozzle to release some of the pressure
-G1 E-1.5 F1200
-; move Z up a bit and retract filament even more
-G1 Z+1 E-1 X-20 Y-20
-;move X/Y to so the head is out of the way
-G28 X0
-G1 Y100
-; steppers off
-M84
-; absolute positioning
-G90
-; Jellybox Printer End Script End
+;---------------------------------
+;;; Jellybox End Script Begin ;;;
+;_________________________________
+M117 Finishing Up ;write Finishing Up
+
+M104 S0     ;extruder heater off
+M140 S0     ;bed heater off (if you have it)
+G91         ;relative positioning
+G1 E-1 F2500 ;retract the filament a bit before lifting the nozzle to release some of the pressure
+G1 Z0.5 E-4 X-10 F9000 ;get out and retract filament even more
+G1 E-25 F2500 ;retract even more
+G90         ;absolute positioning
+G28 X       ;home X so the head is out of the way
+G1 Y140     ;move Y forward, so the print is more accessible
+M84         ;steppers off
+
+M117 Print finished ;write Print finished
+;---------------------------------------
+;;; Jellybox End Script End ;;;
+;_______________________________________
 ; Build Summary
 ;   Build time: 0 hours 32 minutes
 ;   Filament length: 902.1 mm (0.90 m)

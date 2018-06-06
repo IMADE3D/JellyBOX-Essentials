@@ -1,43 +1,54 @@
 ;FLAVOR:RepRap
 ;TIME:222
-M104 S210.000000
-M109 S210.000000
-
-;Jellybox Start Script Begin
-;write “Preparing”
-M117 Preparing
- 
-;optionally adjust steps per mm for your filament
-;M92 E140
-;set x homing offset for default bed leveling
-M206 X10.0 Y0.0 
-;metric values
-G21
-;absolute positioning
-G90
-;start with the fan off
-M107
-;set extruder to absolute mode
-M82
-
-;home all axes
-G28
-;slow Z speed down for greater accuracy
-M203 Z5
-;auto bed leveling procedure
-G29
-;pick up z speed again for print
-M203 Z7
-;reset the extruder position
-G92 E0
-;extrude 5mm of feed stock
-G1 F200 E5
-;reset the extruder position again
-G92 E0
- 
-;write “Print starting”
-M117 Print starting
-;Jellybox Printer Start Script End
+;---------------------------------------
+; ; ; Jellybox Start Script Begin ; ; ;
+;_______________________________________
+G21               ;metric values
+G90               ;absolute positioning
+M82               ;set extruder to absolute mode
+M107              ;start with the fan off
+M117 Preparing    ;write Preparing
+M190 S45          ;wait for the bed to reach 45C
+M109 S180         ;wait for the extruder to reach 180C
+G28               ;home all axes
+M203 Z4           ;slow Z speed down for greater accuracy when probing
+G29               ;auto bed leveling procedure
+;M500              ;optionally save the mesh
+M203 Z7           ;pick up z speed again for printing
+G28 X             ;home x to get as far from the plate as possible
+M420 S1           ;(re) enable bed leveling turned off by the G28
+G0 Y0 F5000       ;position Y in front
+G0 Z15 F3000      ;position Z
+M190 S60          ;wait for the bed to reach desired temperature
+M109 S210         ;wait for the extruder to reach desired temperature
+M300 S440 P100    ;play a tone
+G4 P200           ;pause
+M300 S440 P100    ;play a tone
+G4 P200           ;pause
+M300 S440 P800    ;play a tone
+M0
+M420 S1           ;(re) enable bed leveling to make iron-sure
+M117 Print starting   ;write Print starting
+;================ ;PRINT:LINE start
+G90               ;absolute positioning
+G92 E0            ;reset the extruder position
+M420 S1           ;(re) enable bed leveling to make iron-sure
+G0 Z0             ;get Z down
+M83               ;relative extrusion mode
+G1 E22 F500       ;extrude __mm of feed stock
+G1 E18 F400       ;extrude __mm of feed stock
+G1 E10 F400       ;extrude __mm of feed stock
+G4 S2             ;pause for ooze
+M400              ;make sure all is finished
+M420 S1           ;(re) enable bed leveling to make iron-sure
+G0 F500 X3 Y0 Z0.6;get to the start of the LINE
+G1 E2 F300        ;extrude __mm of feed stock
+G1 F1000 X104 E10  ;print a thick LINE extruding __mm along the way
+M82               ;absolute extrusion mode
+G92 E0            ;reset the extruder position
+;---------------------------------------------
+; ; ; Jellybox Printer Start Script End ; ; ;
+;_____________________________________________
 
 ;Generated with Cura_SteamEngine 2.1.2
 ;LAYER_COUNT:20
@@ -1674,17 +1685,26 @@ G0 X94.194 Y82.978
 G0 F6000.000 X94.110 Y83.741
 G1 F1500.000 X93.739 Y84.111 E269.75781
 G0 F6000.00000 X93.739 Y83.800
-M107
-M104 S0 ;extruder heater off
-M140 S0 ;heated bed heater off (if you have it)
-G91 ;relative positioning
-G1 E-1 F300  ;retract the filament a bit before lifting the nozzle, to release some of the pressure
-G1 Z+0.5 E-5 X-20 Y-20 F9000 ;move Z up a bit and retract filament even more
-G28 X0 Y0 ;move X/Y to min endstops, so the head is out of the way
-M84 ;steppers off
-G90 ;absolute positioning
-M104 S0.000
-;End of Gcode
+;---------------------------------
+;;; Jellybox End Script Begin ;;;
+;_________________________________
+M117 Finishing Up ;write Finishing Up
+
+M104 S0     ;extruder heater off
+M140 S0     ;bed heater off (if you have it)
+G91         ;relative positioning
+G1 E-1 F2500 ;retract the filament a bit before lifting the nozzle to release some of the pressure
+G1 Z0.5 E-4 X-10 F9000 ;get out and retract filament even more
+G1 E-25 F2500 ;retract even more
+G90         ;absolute positioning
+G28 X       ;home X so the head is out of the way
+G1 Y140     ;move Y forward, so the print is more accessible
+M84         ;steppers off
+
+M117 Print finished ;write Print finished
+;---------------------------------------
+;;; Jellybox End Script End ;;;
+;_______________________________________
 ;SETTING_1 [general]\nversion = 1\nname = Current settings\nweight = 0\n\n[setti
 ;SETTING_1 ngs]\ncoasting_speed = 95\nretraction_amount = 1.2\nskin_no_small_gap
 ;SETTING_1 s_heuristic = False\nfill_perimeter_gaps = skin\ncool_fan_speed = 60\
