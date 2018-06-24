@@ -35874,7 +35874,7 @@ M117 Finishing Up ;write Finishing Up
 
 M104 S0     ;extruder heater off
 M140 S0     ;bed heater off (if you have it)
-G91         ;relative position    ing
+G91         ;relative positioning
 G1 E-1 F2500 ;retract the filament a bit before lifting the nozzle to release some of the pressure
 G1 Z0.5 E-4 X-10 F9000 ;get out and retract filament even more
 G1 E-25 F2500 ;retract even more
