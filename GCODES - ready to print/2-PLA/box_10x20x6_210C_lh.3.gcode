@@ -1690,6 +1690,7 @@ G0 F6000.00000 X93.739 Y83.800
 ;_________________________________
 M117 Finishing Up ;write Finishing Up
 
+M107        ; turn the fan off
 M104 S0     ;extruder heater off
 M140 S0     ;bed heater off (if you have it)
 G91         ;relative positioning
