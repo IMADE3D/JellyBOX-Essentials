@@ -21,12 +21,9 @@ G0 Y0 F5000       ;position Y in front
 G0 Z15 F3000      ;position Z
 M190 S60          ;wait for the bed to reach desired temperature
 M109 S210         ;wait for the extruder to reach desired temperature
-M300 S440 P100    ;play a tone
+M300 S440 P300    ;play a tone
 G4 P200           ;pause
-M300 S440 P100    ;play a tone
-G4 P200           ;pause
-M300 S440 P800    ;play a tone
-M0
+M0 Click to start print
 M420 S1           ;(re) enable bed leveling to make iron-sure
 M117 Print starting   ;write Print starting
 ;================ ;PRINT:LINE start
