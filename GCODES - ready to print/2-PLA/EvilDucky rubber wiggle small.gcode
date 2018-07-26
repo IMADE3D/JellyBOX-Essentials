@@ -224,7 +224,7 @@ M420 S1           ;(re) enable bed leveling to make iron-sure
 G0 F500 X3 Y0 Z0.6;get to the start of the LINE
 G1 E2 F300        ;extrude __mm of feed stock
 G1 F1000 X104 E10  ;print a thick LINE extruding __mm along the way
-M82               ;absolute extrusion mode
+M83               ;relative extrusion mode
 G92 E0            ;reset the extruder position
 ;---------------------------------------------
 ; ; ; Jellybox Printer Start Script End ; ; ;
